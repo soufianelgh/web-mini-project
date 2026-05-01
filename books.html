@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Corner — Books</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="site-title">
+      <h1>Personal blog</h1>
+      <p class="tagline">something philosophical </p>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="reflections.html">Reflections</a>
+      <a href="books.html" class="active">Books</a>
+      <a href="drawings.html">Drawing practice</a>
+      <a href="memorize.html">Memorize</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-heading">
+      <h2>Books</h2>
+      <p>What I'm reading, what I want to read, and what I've finished.</p>
+    </div>
+
+       <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="reading">Currently Reading</button>
+      <button class="filter-btn" data-filter="want">Want to Read</button>
+      <button class="filter-btn" data-filter="done">Have Read</button>
+    </div>
+
+       <section class="shelf" data-shelf="reading">
+      <h3 class="shelf-label">Currently Reading</h3>
+
+      <div class="book-item" data-status="reading">
+        <span class="book-status reading">reading</span>
+        <div class="book-info">
+          <strong>Snow </strong>
+          <span class="book-author">Orhan Pamuk</span>
+        </div>
+      </div>
+
+      <div class="book-item" data-status="reading">
+        <span class="book-status reading">reading</span>
+        <div class="book-info">
+          <strong>The adolescent</strong>
+          <span class="book-author">Fyodor Dostoevsky</span>
+        </div>
+      </div>
+
+      <div class="book-item" data-status="reading">
+        <span class="book-status reading">reading</span>
+        <div class="book-info">
+            <strong>La vérité sur l'affaire Harry Québert</strong>
+          <span class="book-author">Joël Dicker</span>
+        </div>
+      </div>
+
+
+    </section>
+
+    <section class="shelf" data-shelf="want">
+      <h3 class="shelf-label">Want to Read</h3>
+
+      <div class="book-item" data-status="want">
+        <span class="book-status want">want</span>
+        <div class="book-info">
+          <strong>Powers of Horror : An Essay on Abjection</strong>
+          <span class="book-author">Julia Kristeva</span>
+        </div>
+      </div>
+
+      <div class="book-item" data-status="want">
+        <span class="book-status want">want</span>
+        <div class="book-info">
+          <strong>Regarding the pain of others</strong>
+          <span class="book-author">Susan Sontag</span>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="shelf" data-shelf="done">
+      <h3 class="shelf-label">Have Read</h3>
+
+      <div class="book-item" data-status="done">
+        <span class="book-status done">done</span>
+        <div class="book-info">
+          <strong>The age of innocence</strong>
+          <span class="book-author">Edith Wharthon</span>
+        </div>
+      </div>
+
+      <div class="book-item" data-status="done">
+        <span class="book-status done">done</span>
+        <div class="book-info">
+          <strong>مقامات بديع الزمان الهمذاني</strong>
+          <span class="book-author">بديع الزمان الهمذاني</span>
+        </div>
+      </div>
+
+
+      <div class="book-item" data-status="done">
+        <span class="book-status done">done</span>
+        <div class="book-info">
+          <strong>First love</strong>
+          <span class="book-author">turgenev Ivan</span>
+        </div>
+      </div>
+
+
+      <div class="book-item" data-status="done">
+        <span class="book-status done">done</span>
+        <div class="book-info">
+          <strong>1984</strong>
+          <span class="book-author">George Orwell</span>
+        </div>
+      </div>
+
+
+      <div class="book-item" data-status="done">
+        <span class="book-status done">done</span>
+        <div class="book-info">
+          <strong>Sputnik Sweetheart</strong>
+          <span class="book-author">Murakami sweetheart</span>
+        </div>
+      </div>
+
+
+      <div class="book-item" data-status="done">
+        <span class="book-status done">done</span>
+        <div class="book-info">
+          <strong>Intermezzo</strong>
+          <span class="book-author">Sally Rooney</span>
+        </div>
+      </div>
+
+
+      <div class="book-item" data-status="done">
+        <span class="book-status done">done</span>
+        <div class="book-info">
+          <strong>The Scarlet Letter</strong>
+          <span class="book-author">Nathaniel Hawthorne</span>
+        </div>
+      </div>
+
+
+      <div class="book-item" data-status="done">
+        <span class="book-status done">done</span>
+        <div class="book-info">
+          <strong>Crime and punishment</strong>
+          <span class="book-author">Fyodor Dostoevsky</span>
+        </div>
+      </div>
+
+
+      <div class="book-item" data-status="done">
+        <span class="book-status done">done</span>
+        <div class="book-info">
+          <strong>Darkness and light</strong>
+          <span class="book-author">John Harvey</span>
+        </div>
+      </div>
+
+      <div class="book-item" data-status="done">
+        <span class="book-status done">done</span>
+        <div class="book-info">
+          <strong>Anna Karenina</strong>
+          <span class="book-author">Leo Tolstoy</span>
+        </div>
+      </div>
+
+
+      <div class="book-item" data-status="done">
+        <span class="book-status done">done</span>
+        <div class="book-info">
+          <strong>Oliver twist</strong>
+          <span class="book-author">Charles Dickens</span>
+        </div>
+      </div>
+
+
+      <div class="book-item" data-status="done">
+        <span class="book-status done">done</span>
+        <div class="book-info">
+          <strong>Resurrection</strong>
+          <span class="book-author">Leo Tolstoy</span>
+        </div>
+      </div>
+
+
+      <div class="book-item" data-status="done">
+        <span class="book-status done">done</span>
+        <div class="book-info">
+          <strong>Frankenstein: or,The Modern Prometheus</strong>
+          <span class="book-author">Mary Wollstonecraft Shelley</span>
+        </div>
+      </div>
+
+    </section>
+
+
+    <section class="contact-section">
+      <h3>Start a Discussion</h3>
+      <p>Read something that made you think? Want to recommend a book? Leave a note.</p>
+
+      <div class="form-wrap">
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="your@email.com">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="What's on your mind?"></textarea>
+        </div>
+
+        <button id="send-btn">Send message</button>
+
+        <p id="form-feedback" class="form-feedback"></p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>A blog.</p>
+  </footer>
+
+  <script src="books.js"></script>
+
+</body>
+</html>

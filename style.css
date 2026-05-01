@@ -1,0 +1,500 @@
+
+:root {
+  --bg:        #f5f0e8;
+  --surface:   #ede8df;
+  --text:      #2c2825;
+  --muted:     #8a8075;
+  --accent:    #7a5c3e;
+  --accent2:   #c49a6c;
+  --border:    #d6cfc4;
+  --reading:   #4a7c5e;
+  --want:      #5a6e9e;
+  --done:      #8a8075;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+header {
+  padding: 48px 0 32px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 48px;
+}
+
+.site-title h1 {
+  font-size: 28px;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+}
+
+.tagline {
+  font-size: 14px;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 2px;
+}
+
+nav {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 0;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 15px;
+  font-family: "Courier New", monospace;
+  padding: 0 16px 0 0;
+  border-right: 1px solid var(--border);
+  margin-right: 16px;
+  transition: color 0.2s;
+}
+
+nav a:last-child {
+  border-right: none;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+nav a.active {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.page-heading {
+  margin-bottom: 40px;
+}
+
+.page-heading h2 {
+  font-size: 30px;
+  font-weight: normal;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.page-heading p {
+  color: var(--muted);
+  font-size: 16px;
+  font-style: italic;
+}
+
+.hero {
+  margin-bottom: 56px;
+}
+
+.hero h2 {
+  font-size: 36px;
+  font-weight: normal;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: var(--text);
+  max-width: 580px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 28px 24px;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: var(--accent2);
+}
+
+.card-icon {
+  font-size: 20px;
+  color: var(--accent2);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/*
+    partie reflections
+*/
+
+.entry {
+  border-top: 1px solid var(--border);
+  padding: 36px 0;
+}
+
+.entry-meta time {
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.entry h3 {
+  font-size: 20px;
+  font-weight: normal;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.entry p {
+  color: var(--text);
+  max-width: 600px;
+}
+
+/*   partie livres
+*/
+
+.filter-bar {
+  margin-bottom: 36px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  padding: 6px 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.shelf {
+  margin-bottom: 40px;
+}
+
+.shelf-label {
+  font-size: 13px;
+  font-family: "Courier New", monospace;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.book-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.book-status {
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 2px;
+  min-width: 60px;
+  text-align: center;
+  margin-top: 3px;
+}
+
+.book-status.reading {
+  background: var(--reading);
+  color: #fff;
+}
+
+.book-status.want {
+  background: var(--want);
+  color: #fff;
+}
+
+.book-status.done {
+  background: var(--done);
+  color: #fff;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.book-info strong {
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--text);
+}
+
+.book-author {
+  font-size: 14px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+
+.shelf.hidden {
+  display: none;
+}
+
+/* partie discussion  */
+.contact-section {
+  margin-top: 64px;
+  padding-top: 40px;
+  border-top: 2px solid var(--border);
+}
+
+.contact-section h3 {
+  font-size: 22px;
+  font-weight: normal;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.contact-section > p {
+  color: var(--muted);
+  font-size: 15px;
+  font-style: italic;
+  margin-bottom: 28px;
+}
+
+.form-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 520px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-group input,
+.form-group textarea {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: Georgia, serif;
+  font-size: 16px;
+  padding: 10px 14px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+#send-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  padding: 12px 28px;
+  cursor: pointer;
+  align-self: flex-start;
+  letter-spacing: 0.05em;
+  transition: background 0.2s;
+}
+
+#send-btn:hover {
+  background: var(--accent2);
+}
+
+.form-feedback {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--reading);
+  min-height: 20px;
+}
+
+/*
+  partie drawing practice
+*/
+
+.drawing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 32px;
+}
+
+.drawing-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.drawing-placeholder {
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+}
+
+.drawing-item img {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--border);
+}
+
+.drawing-item figcaption {
+  font-size: 14px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.note {
+  font-size: 14px;
+  color: var(--muted);
+  font-style: italic;
+  border-left: 3px solid var(--border);
+  padding-left: 16px;
+  margin-top: 16px;
+}
+
+.note code {
+  font-family: "Courier New", monospace;
+  background: var(--surface);
+  padding: 1px 5px;
+  font-style: normal;
+}
+
+/*    
+ partie memorize
+*/
+
+.memory-item {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.memory-label {
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  color: var(--accent2);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
+}
+
+.memory-item blockquote {
+  border-left: 3px solid var(--accent2);
+  padding-left: 20px;
+}
+
+.memory-item blockquote p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.memory-item blockquote cite {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/*    FOOTER
+*/
+
+footer {
+  margin-top: 80px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--muted);
+  font-family: "Courier New", monospace;
+}
+
+/* 
+   partie responsive
+    */
+
+@media (max-width: 520px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .drawing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav a {
+    font-size: 13px;
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+}
